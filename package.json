@@ -1,0 +1,11 @@
+{
+  "name": "mindustry-mod-maker",
+  "version": "1.0.0",
+  "description": "Site to generate JSON / HJSON code for Mindustry modding",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DanilaMint",
+  "license": "MIT"
+}

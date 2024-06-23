@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJG - Item</title>
+    <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <a href="../index.html">Back</a><br>
+    <span>Name </span><input type="text" id="name"><br>
+    <span>Description </span><input type="text" id="description"><br>
+    <span>Type </span><select id="type">
+        <option value="res">Resource</option>
+        <option selected value="mat">Material</option>
+    </select><br>
+    <span>Explosiveness </span><input type="number" id="explosiveness" value="0"><br>
+    <span>Flammablity </span><input type="number" id="flammablity" value="0"><br>
+    <span>Radioactivity </span><input type="number" id="radioactivity" value="0"><br>
+    <span>Cost </span><input type="number" id="cost"><br>
+    <span>Hardness </span><input type="number" id="hardness" max="5" min="1" value="1"><br>
+    <span>Color </span><input type="color" id="color"><br>
+    <span>Always Unlocked </span><input type="checkbox" id="always-unlocked"><br>
+    <button type="submit" id="generate">Generate</button><br><br>
+    <a href="" style="display: none;" id="download">Download</a>
+</body>
+
+<script>
+    const data = {
+        name: document.getElementById('name'),
+        description: document.getElementById('description'),
+        type: document.getElementById('type'),
+        explosiveness: document.getElementById('explosiveness'),
+        flammablity: document.getElementById('flammablity'),
+        radioactivity: document.getElementById('radioactivity'),
+        cost: document.getElementById('cost'),
+        hardness: document.getElementById('hardness'),
+        color: document.getElementById('color'),
+        always_unlocked: document.getElementById('always-unlocked')
+    };
+
+    document.getElementById('generate').addEventListener('click', () => {
+        const result = {
+            type: data.type.options[0].text,
+            name: data.name.value,
+            description: data.description.value,
+            explosiveness: Number(data.explosiveness.value),
+            flammablity: Number(data.flammablity.value),
+            radioactivity: Number(data.radioactivity.value),
+            cost: Number(data.cost.value),
+            hardness: Number(data.hardness.value),
+            color: data.color.value,
+            always_unlocked: data.always_unlocked.checked
+        };
+        const jsonString = JSON.stringify(result);
+        let blob = new Blob([jsonString], {
+            type: "application/json"
+        });
+        document.getElementById('download').style.display = 'inline';
+        document.getElementById('download').setAttribute('href', URL.createObjectURL(blob));
+        document.getElementById('download').setAttribute('download', `${data.name.value}.json`);
+    });
+</script>
+
+</html>
