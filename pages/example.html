@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
+    <title>MJG - Item</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="center">
+        <button id="back-btn">
+            <img src="../assets/ui/undo.png" alt="undo" class="btn">
+            <span class="btn">Back</span>
+        </button><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <br>
+        <button id="generate-btn">
+            <img src="../assets/ui/code.png" alt="undo" class="btn">
+            <span class="btn">Generate</span>
+        </button>
+    </div>
+</body>
+
+<script>
+    const generateBtn = document.getElementById("generate-btn");
+    const backBtn = document.getElementById("back-btn");
+    const manifestBtn = document.getElementById("manifest-btn");
+
+    backBtn.addEventListener('click', () => {
+        let a = document.createElement('a');
+        a.href = "../index.html";
+        a.click();
+    });
+</script>
+
+</html>

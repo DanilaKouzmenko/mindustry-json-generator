@@ -4,10 +4,16 @@ const openFile = (href) => {
     a.click();
 }
 
-document.getElementById('item-btn').addEventListener('click', () => {
-    openFile('pages/item.html');
+document.getElementById('github-btn').addEventListener('click', () => {
+    openFile('https://github.com/DanilaKouzmenko');
 });
 
-document.getElementById('manifest-btn').addEventListener('click', () => {
-    openFile('pages/manifest.html');
+document.getElementById('example-btn1').addEventListener('click', () => {
+    openFile('pages/example.html');
+});
+document.getElementById('example-btn2').addEventListener('click', () => {
+    openFile('pages/example.html');
+});
+document.getElementById('example-btn3').addEventListener('click', () => {
+    openFile('pages/example.html');
 });

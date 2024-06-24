@@ -1,0 +1,59 @@
+/**/
+
+@font-face {
+    font-family: consolas;
+    src: url(../assets/fonts/consolas.ttf);
+}
+
+html {
+    background-image: url(../);
+    font-family: consolas, monospace;
+    background-image: url(../assets/sprites/screenshot.png);
+}
+
+body {
+    background-color: #000000c0;
+    margin: 0px;
+}
+
+.center {
+    width: 700px;
+    height: 800px;
+    background-color: #303030;
+    margin: auto;
+    color: #d3d3d3;
+    padding: 8px;
+    font-size: 20px;
+}
+
+button {
+    background-color: #404040;
+    outline: none;
+    border-radius: 10px;
+    height: 70px;
+    align-items: center;
+    border: none;
+    display: flex;
+    margin: 2px;
+}
+
+span.btn {
+    text-align: left;
+    color: #d3d3d3;
+    font-family: consolas, monospace;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+img.btn {
+    width: 64px;
+    height: 64px;
+    margin-right: 14px;
+}
+
+.top-panel {
+    margin: 20px;
+    background-color: #505050;
+    padding: 10px;
+    border-radius: 10px;
+}

@@ -6,52 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindustry JSON Generator</title>
     <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
-    <style>
-        body {
-            background-color: #404040;
-        }
-        
-        .obj {
-            display: flex;
-            align-items: center;
-            width: 196px;
-        }
-        
-        img.obj {
-            width: 32px;
-            height: 32px;
-            margin: 4px;
-            border-radius: 5px;
-        }
-        
-        span.obj {
-            font-size: 20px;
-            text-align: left;
-        }
-        
-        button.obj {
-            height: 40px;
-            background-color: #606060;
-        }
-    </style>
+    <link rel="stylesheet" href="pages/style.css">
 </head>
 
 <body>
-    <div>Top panel</div>
-    <div style="display: none;">
-        Download script to make a blank mod<br>
-        <a href="blank.sh" download="blank.sh">Linux</a><br>
-        <a href="blank.cmd" download="blank.cmd">Windows</a>
+    <div class="center">
+        <div class="top-panel">
+            <button id="github-btn">
+                <img src="assets/ui/github.png" alt="git" class="btn">
+                <span class="btn">GitHub</span>
+            </button>
+        </div>
+        <button id="example-btn1">
+            <img src="assets/ui/code.png" alt="gear" class="btn">
+            <span class="btn">Example1</span>
+        </button>
+        <button id="example-btn2">
+            <img src="assets/ui/code.png" alt="gear" class="btn">
+            <span class="btn">Example2</span>
+        </button>
+        <button id="example-btn3">
+            <img src="assets/ui/code.png" alt="gear" class="btn">
+            <span class="btn">Example3</span>
+        </button>
     </div>
-    <button id="manifest-btn" class="obj">
-        <img src="assets/ui/main.png" alt="bastion-core" width="32" height="32" class="obj">
-        <span class="obj">Main file</span>
-    </button>
-    <button id="item-btn" class="obj">
-        <img src="assets/sprites/items/item-copper.png" alt="copper" width="32" height="32" class="obj">
-        <span class="obj">Item</span>
-    </button>
-
     <script src="src/main.js"></script>
 </body>
 
